@@ -1,0 +1,32 @@
+{
+  "name": "voybit/payment-gateway-laravel",
+  "description": "Laravel integration for the Voybit crypto payment gateway.",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.2",
+    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+    "illuminate/http": "^10.0 || ^11.0 || ^12.0",
+    "voybit/payment-gateway": "dev-main"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/VOYBIT/voybit-payment-gateway-php"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Voybit\\PaymentGateway\\Laravel\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Voybit\\PaymentGateway\\Laravel\\VoybitServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
